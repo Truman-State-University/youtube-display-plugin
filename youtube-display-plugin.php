@@ -118,13 +118,16 @@ class TrumanYouTube {
 		ob_start();
 
 		while ( $itemcounter < count( $items ) ) {
-
+            ?>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="carousel carousel-showmanymoveone slide" id="youtube_display_carousel" data-interval="false">
+                        <div class="carousel-inner">
+        <?php
 			// This will search in the 2 jsons
 			foreach ( $sizearray as $key => $jsons ) {
 
-				?>
-				<div class="row">
-					<?php
+
 
 					foreach ( $jsons as $key => $value ) :
 						if ( $itemcounter < count( $items ) ) :
@@ -132,15 +135,17 @@ class TrumanYouTube {
 							$item = $items[ $itemcounter ];
 
 							?>
-							<div class="<?php echo $value->vidclass; ?>">
-								<div class="vid">
-									<a class="popup-youtube" href="<?php echo $item['watch']; ?>">
-										<img src="<?php echo $item['thumbnail']; ?>" alt="youtube thumbnail" />
-										<span class="play"></span>
-										<span class="vid-caption <?php echo $value->captionclass; ?>"><?php echo $item['title']; ?></span>
-									</a>
-								</div>
-							</div>
+                            <div class="item<?php if ($itemcounter == 0) { echo " active"; } ?>">
+                                <div class="<?php echo $value->vidclass; ?>">
+                                    <div class="vid">
+                                        <a class="popup-youtube" href="<?php echo $item['watch']; ?>">
+                                            <img src="<?php echo $item['thumbnail']; ?>" alt="youtube thumbnail" />
+                                            <span class="play"></span>
+                                            <span class="vid-caption <?php echo $value->captionclass; ?>"><?php echo $item['title']; ?></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
 							<?php
 
 							$itemcounter++;
@@ -148,11 +153,14 @@ class TrumanYouTube {
 						endif;
 					endforeach;
 
-					?>
-				</div>
-				<?php
-
 			}
+            ?>
+                    </div>
+                        <a class="left carousel-control" href="#youtube_display_carousel" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+                        <a class="right carousel-control" href="#youtube_display_carousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>                        </div>
+                </div>
+            </div>
+            <?php
 		}
 
 		return ob_get_clean();
