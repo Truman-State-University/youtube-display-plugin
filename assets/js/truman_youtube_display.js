@@ -35,7 +35,7 @@ jQuery(document).ready(function(){
         jQuery(this).find('.play').css("border-top-width", imageheight*.1);
         jQuery(this).find('.play').css("border-bottom-width", imageheight*.1);
         jQuery(this).find('.play').css("border-left-width", imageheight*.20);
-        jQuery(this).find('.play').css("top", imageheight*.30);
+        jQuery(this).find('.play').css("top", imageheight*.22);
 
     });
 
