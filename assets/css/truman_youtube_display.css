@@ -32,12 +32,10 @@
 .vid .vid-caption {
 	position: absolute;
 	bottom: 0;
-	right: 0;
 	color: #000;
 	background: rgba(255,255,255,.8);
-	text-align: right;
 	padding: 5px;
-	width: auto;
+	width: 100%;
 	font-weight: normal !important;
 }
 
