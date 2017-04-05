@@ -89,12 +89,11 @@ class TrumanYouTube {
 
 		// iterate over entries in feed
 		foreach ( $youtube_items->items as $entry ) {
-
 			$id = $entry->snippet->resourceId->videoId;
 			$watch = sprintf( 'https://www.youtube.com/watch?v=%s', $id );
 			$thumbnails = (array) $entry->snippet->thumbnails;
 
-			$thumbnail = array_pop( $thumbnails )->url;
+			$thumbnail = $thumbnails['medium']->url;
 
 			// Add the item.
 			$items[] = array(
