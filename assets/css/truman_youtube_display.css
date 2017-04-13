@@ -37,6 +37,7 @@
 	padding: 5px;
 	width: 100%;
 	font-weight: normal !important;
+	text-align: center;
 }
 
 .vid:hover .play {
@@ -51,6 +52,7 @@
 .carousel-showmanymoveone .carousel-control {
 	width: 4%;
 	background-image: none;
+	color: #fff !important;
 }
 .carousel-showmanymoveone .carousel-control.left {
 	margin-left: 15px;
