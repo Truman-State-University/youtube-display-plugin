@@ -157,11 +157,11 @@ class TrumanYouTube {
             ?>
                     </div>
                         <a class="left carousel-control" href="#youtube_display_carousel" data-slide="prev">
-                            <i class="glyphicon glyphicon-chevron-left"></i>
+                            <span class="glyphicon glyphicon-chevron-left"></span>
                             <span class="sr-only">Previous Videos</span>
                         </a>
                         <a class="right carousel-control" href="#youtube_display_carousel" data-slide="next">
-                            <i class="glyphicon glyphicon-chevron-right"></i>
+                            <spanc class="glyphicon glyphicon-chevron-right"></spanc>
                             <span class="sr-only">Next Videos</span>
                         </a>
                     </div>
