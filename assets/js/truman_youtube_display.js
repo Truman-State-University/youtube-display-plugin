@@ -30,7 +30,6 @@ jQuery(document).ready(function(){
     });
 
     var imageheight = jQuery('.vid img')[0].height;
-    console.log(imageheight);
     jQuery('.vid').each(function(){
         jQuery(this).find('.play').css("border-top-width", imageheight*.1);
         jQuery(this).find('.play').css("border-bottom-width", imageheight*.1);
